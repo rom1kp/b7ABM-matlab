@@ -7,7 +7,6 @@ for i=1:size(stat_service_ratio,1) % run for all stat areas
     %  1 - 'stat' ;  1 - 'stat' ; 5 - 'price M'
     mean_price= nanmean(Assets(Assets(:,1)==stat_service_ratio(i,1),5)); % mean price for all matching assets in SA
     %% building size
-%     B_size=Build_Data(FFF,7).*ceil(Build_Data(FFF,11));
     B_size =Build_Data(FFF,25); % col(25) floorsize ; no header after col(21)
     B_pric=B_size*mean_price; % floor price
     %% building service ratio
