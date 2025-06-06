@@ -6,7 +6,7 @@ usage=unique(Build_Data(:,3));
 
 %% number of HH in building - smart calculation
 X=unique(Assets(Assets(:,11)==1,2)); % unique building id for occupied assets 
-Y=Assets(Assets(:,11)==1,2); % all accupied assets
+Y=Assets(Assets(:,11)==1,2); % all occupied assets
 H=histc(Y,(X)); % histogram for assets per building
 
 [~,locb]=ismember(X,Build_Data(:,1));
