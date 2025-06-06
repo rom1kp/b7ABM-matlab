@@ -2,7 +2,8 @@ function lockdown = building_lockdown (Build_Data, sc, vR, prevVR)
 
 lockdown = ones(length(Build_Data),1);
 if sum(contains(sc,'GRADUAL'))
-    if 1<vR && 2<vR % if visible R is between 1 & 2
+    % visible R is between 1 and 2
+    if 1 < vR && vR < 2
         if prevVR<=1 || prevVR>=2
             if sum(contains(sc,'ALL'))
                 non_residential = Build_Data(:,3)>=3; % building usage
