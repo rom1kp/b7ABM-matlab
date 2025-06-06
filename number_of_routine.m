@@ -1,6 +1,6 @@
 function [Individuals_data,Individuals_data_P]=number_of_routine(Individuals_data,Individuals_data_P,acts,W_acts_num)
 
-s=size(Individuals_data,1); % returns the number of culumns in data set
+s=size(Individuals_data,1); % returns the number of rows in data set
 R=rand(s,1); % random matrix 
 
 %% THE equation
